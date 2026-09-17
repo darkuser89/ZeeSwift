@@ -23,7 +23,7 @@ struct ZeeSwiftApp: App {
         Button(L10n.text("Add Games …")) { model.chooseGame() }.keyboardShortcut("o")
       }
     }
-    Window("Game", id: "game") {
+    WindowGroup("Game", id: "game") {
       ExternalGameWindow(model: model)
         .environment(\.locale, selectedLanguage.locale)
     }
@@ -54,7 +54,6 @@ struct ZeeSwiftApp: App {
   @Published private(set) var presentsGameInSeparateWindow = false
   @Published private(set) var pixelExactMagnification = false
   @Published private(set) var metalFXMode = MetalFXMode.off
-  @Published private(set) var windowScaling = WindowScaling.preserveAspect
   let library = LibraryModel()
   let controllerSettings = ControllerSettingsModel()
   let frames = FrameStore()
@@ -99,7 +98,6 @@ struct ZeeSwiftApp: App {
     title = game.title
     activeGame = game
     metalFXMode = MetalFXPreferences().mode(for: activeGame?.classID)
-    windowScaling = WindowScalingPreferences().mode(for: game.classID)
     pixelExactMagnification = PixelScalingPreferences().enabled(for: game.classID)
     detail = game.publisher
     presentsGameInSeparateWindow = UserDefaults.standard.bool(
@@ -155,7 +153,6 @@ struct ZeeSwiftApp: App {
   func refreshDisplayPreferences() {
     guard let activeGame else { return }
     metalFXMode = MetalFXPreferences().mode(for: activeGame.classID)
-    windowScaling = WindowScalingPreferences().mode(for: activeGame.classID)
     pixelExactMagnification = PixelScalingPreferences().enabled(for: activeGame.classID)
     session?.setPixelExactMagnification(pixelExactMagnification)
     session?.setTemporalEnabled(metalFXMode == .temporal && Metal4Renderer.supportsTemporal)
@@ -235,8 +232,8 @@ struct ExternalGameWindow: View {
       Color.black
       if model.showingGame && model.presentsGameInSeparateWindow {
         MetalSurface(
-          frames: model.frames, windowScaling: model.windowScaling, metalFXMode: model.metalFXMode,
-          onKeys: model.keyboard
+          frames: model.frames, metalFXMode: model.metalFXMode,
+          onKeys: model.keyboard, onWindowClose: model.returnToLibrary
         ) { model.error = $0 }
         if let notice = model.copyright {
           CopyrightOverlay(notice: notice, onClose: model.dismissCopyright)
@@ -245,11 +242,6 @@ struct ExternalGameWindow: View {
     }
     .frame(minWidth: 320, minHeight: 240)
     .navigationTitle(model.title)
-    .onDisappear {
-      if model.showingGame && model.presentsGameInSeparateWindow {
-        model.returnToLibrary()
-      }
-    }
   }
 }
 
@@ -269,7 +261,7 @@ struct GamePlayerView: View {
         Button("Stop", systemImage: "stop.fill") { model.stop() }
       }.padding(20)
       ZStack {
-        MetalSurface(frames: model.frames, windowScaling: model.windowScaling, metalFXMode: model.metalFXMode, onKeys: model.keyboard) {
+        MetalSurface(frames: model.frames, metalFXMode: model.metalFXMode, onKeys: model.keyboard) {
           model.error = $0
         }
         if model.busy {
@@ -422,20 +414,22 @@ struct DiagnosticsSettingsView: View {
 
 struct MetalSurface: NSViewRepresentable {
   let frames: FrameStore
-  var windowScaling = WindowScaling.preserveAspect
   var metalFXMode = MetalFXMode.off
   let onKeys: (Set<UInt16>) -> Void
+  var onWindowClose: (() -> Void)? = nil
   let onFailure: (String) -> Void
   final class Coordinator { var renderer: Metal4Renderer? }
   func makeCoordinator() -> Coordinator { Coordinator() }
   func makeNSView(context: Context) -> MTKView {
     let view = GameMetalView()
     view.onKeys = onKeys
+    view.onWindowClose = onWindowClose
+    view.keepsWindowAspectRatio = true
     view.colorPixelFormat = .bgra8Unorm
     view.preferredFramesPerSecond = 60
     do {
       let renderer = try Metal4Renderer(frames: frames)
-      renderer.windowScaling = windowScaling
+      renderer.windowScaling = .preserveAspect
       renderer.metalFXMode = metalFXMode
       renderer.onFailure = onFailure
       context.coordinator.renderer = renderer
@@ -446,28 +440,99 @@ struct MetalSurface: NSViewRepresentable {
   }
   func updateNSView(_ nsView: MTKView, context: Context) {
     (nsView as? GameMetalView)?.onKeys = onKeys
-    context.coordinator.renderer?.windowScaling = windowScaling
+    (nsView as? GameMetalView)?.onWindowClose = onWindowClose
+    (nsView as? GameMetalView)?.keepsWindowAspectRatio = true
+    context.coordinator.renderer?.windowScaling = .preserveAspect
     context.coordinator.renderer?.metalFXMode = metalFXMode
   }
 }
 
 final class GameMetalView: MTKView {
   var onKeys: ((Set<UInt16>) -> Void)?
+  var onWindowClose: (() -> Void)?
+  var keepsWindowAspectRatio = false
   private var pressed = Set<UInt16>()
   private var focusObserver: NSObjectProtocol?
+  private var windowObservers: [NSObjectProtocol] = []
+  private var correctingWindowSize = false
+  private var isFullScreenTransitioning = false
+  private var lastContentSize: CGSize?
   override var acceptsFirstResponder: Bool { true }
   override func viewDidMoveToWindow() {
     super.viewDidMoveToWindow()
     if let focusObserver { NotificationCenter.default.removeObserver(focusObserver) }
+    for observer in windowObservers { NotificationCenter.default.removeObserver(observer) }
+    windowObservers.removeAll()
     focusObserver = nil
     if let window {
       focusObserver = NotificationCenter.default.addObserver(forName: NSWindow.didResignKeyNotification,
         object: window, queue: .main) { [weak self] _ in
           MainActor.assumeIsolated { self?.releaseKeys() }
         }
+      observeWindow(NSWindow.didResizeNotification, window: window) { $0.windowDidResize() }
+      observeWindow(NSWindow.willCloseNotification, window: window) { $0.onWindowClose?() }
+      observeWindow(NSWindow.willEnterFullScreenNotification, window: window) {
+        $0.isFullScreenTransitioning = true
+      }
+      observeWindow(NSWindow.didEnterFullScreenNotification, window: window) {
+        $0.isFullScreenTransitioning = false
+        $0.lastContentSize = nil
+      }
+      observeWindow(NSWindow.willExitFullScreenNotification, window: window) {
+        $0.isFullScreenTransitioning = true
+      }
+      observeWindow(NSWindow.didExitFullScreenNotification, window: window) {
+        $0.isFullScreenTransitioning = false
+        $0.lastContentSize = nil
+        DispatchQueue.main.async { [weak self = $0] in
+          self?.fitWindowToGame(preferGameHeight: false)
+        }
+      }
+      DispatchQueue.main.async { [weak self, weak window] in
+        guard let self, let window, self.window === window else { return }
+        self.fitWindowToGame(preferGameHeight: true)
+      }
     } else { releaseKeys() }
   }
-  deinit { if let focusObserver { NotificationCenter.default.removeObserver(focusObserver) } }
+  private func windowDidResize() {
+    guard !correctingWindowSize, !isFullScreenTransitioning else { return }
+    fitWindowToGame(preferGameHeight: false)
+  }
+  private func observeWindow(_ name: NSNotification.Name, window: NSWindow,
+    action: @escaping @MainActor (GameMetalView) -> Void) {
+    windowObservers.append(NotificationCenter.default.addObserver(forName: name,
+      object: window, queue: .main) { [weak self] _ in
+        MainActor.assumeIsolated {
+          guard let self else { return }
+          action(self)
+        }
+      })
+  }
+  private func fitWindowToGame(preferGameHeight: Bool) {
+    guard keepsWindowAspectRatio, let window, let content = window.contentView,
+      !isFullScreenTransitioning, !window.styleMask.contains(.fullScreen),
+      bounds.width > 0, bounds.height > 0 else { return }
+    content.layoutSubtreeIfNeeded()
+    let current = content.bounds.size
+    let target = GameWindowAspectSizing.fittedContentSize(current: current, game: bounds.size,
+      previous: lastContentSize, preferGameHeight: preferGameHeight)
+    lastContentSize = current
+    guard abs(target.width - current.width) > 0.5 || abs(target.height - current.height) > 0.5 else {
+      return
+    }
+    correctingWindowSize = true
+    window.setContentSize(target)
+    content.layoutSubtreeIfNeeded()
+    lastContentSize = content.bounds.size
+    correctingWindowSize = false
+    if bounds.height > 0, abs(bounds.width / bounds.height - GameWindowAspectSizing.ratio) > 0.001 {
+      DispatchQueue.main.async { [weak self] in self?.fitWindowToGame(preferGameHeight: false) }
+    }
+  }
+  deinit {
+    if let focusObserver { NotificationCenter.default.removeObserver(focusObserver) }
+    for observer in windowObservers { NotificationCenter.default.removeObserver(observer) }
+  }
   override func mouseDown(with event: NSEvent) { window?.makeFirstResponder(self) }
   override func keyDown(with event: NSEvent) {
     guard !event.modifierFlags.contains(.command) else {

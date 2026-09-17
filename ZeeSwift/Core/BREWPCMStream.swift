@@ -19,6 +19,12 @@ final class BREWPCMStream {
     // Keep 100 ms ready across guest frame/timer callbacks without changing PCM.
     queueCapacity = max(capacity, player.format.sampleRate / 10 * player.format.bytesPerFrame)
   }
+
+  static func readSize(capacity: Int, available: Int, preferred: Int, frameBytes: Int) -> Int {
+    let limit = min(capacity, available, max(frameBytes, preferred))
+    let alignment = capacity >= 4 ? 4 : frameBytes
+    return limit / alignment * alignment
+  }
 }
 
 extension BREWRuntime {
@@ -85,6 +91,8 @@ extension BREWRuntime {
     do { try disposePCMStream(object) }
     catch { _ = try? callPCMSource(source, offset: 4); throw error }
     object.player?.stop()
+    object.mutableSource = nil
+    object.mutableCount = 0
     object.pcmStream = BREWPCMStream(source: source, buffer: buffer, callback: callback,
       capacity: capacity, player: player)
     object.player = player
@@ -107,8 +115,14 @@ extension BREWRuntime {
         guard available > 0 else { break }
         // Several short scheduled buffers allow replenishment before the entire
         // queue drains, instead of introducing a gap at every buffer boundary.
-        let request = min(stream.capacity, available, max(frameBytes,
-          stream.player.format.sampleRate / 50 * frameBytes))
+        // Original guest mixers commonly expand compressed/8-bit input in
+        // 32-bit batches. A short request outside that quantum looks like EOF
+        // to them and can restart a looping source on every buffer (Prey did
+        // this for the former 882-byte request). Preserve tiny test/device
+        // buffers, otherwise ask for complete four-byte batches.
+        let request = BREWPCMStream.readSize(capacity: stream.capacity, available: available,
+          preferred: stream.player.format.sampleRate / 50 * frameBytes, frameBytes: frameBytes)
+        guard request >= frameBytes else { break }
         let result = Int32(bitPattern: try callPCMSource(stream.source, offset: 0x0c,
           arguments: [stream.buffer, UInt32(request)]))
         guard media[handle] === object, object.pcmStream === stream, object.state == 3 else { break }

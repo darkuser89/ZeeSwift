@@ -44,6 +44,8 @@ final class BREWMedia {
   var muted = false
   var repeatCount: UInt32 = 1
   var channelShared = false
+  var mutableSource: UInt32?
+  var mutableCount = 0
   init(classID: UInt32) { self.classID = classID }
   deinit { player?.stop() }
   var milliseconds: UInt32 { UInt32(clamping: Int64((player?.currentTime ?? 0) * 1000)) }
@@ -216,11 +218,23 @@ extension BREWRuntime {
       return 14
     }
     do {
-      let player: any GameAudioPlayer =
-        midi ? try MIDIAudioPlayer(data: bytes) : try AVAudioPlayer(data: bytes)
+      let player: any GameAudioPlayer
+      if !midi && !mp3 && !vorbis && type == 1 && bytes.count <= 256 * 1024 {
+        do {
+          player = try MutableWAVPlayer(wave: bytes)
+          log.append("IMedia mutable WAV buffer: \(bytes.count) Bytes")
+        } catch {
+          log.append("IMedia mutable WAV fallback: \(error.localizedDescription)")
+          player = try AVAudioPlayer(data: bytes)
+        }
+      } else {
+        player = midi ? try MIDIAudioPlayer(data: bytes) : try AVAudioPlayer(data: bytes)
+      }
       try disposePCMStream(object)
       object.player?.stop()
       object.player = player
+      object.mutableSource = player is MutableWAVPlayer ? source : nil
+      object.mutableCount = player is MutableWAVPlayer ? bytes.count : 0
       object.descriptor = descriptor
       object.state = 2
       object.configure()
@@ -234,6 +248,11 @@ extension BREWRuntime {
   }
   var hasPendingMedia: Bool {
     !mediaNotifications.isEmpty || media.values.contains { $0.state == 3 }
+  }
+  private func refreshMutableMedia(_ object: BREWMedia) throws {
+    guard let source = object.mutableSource, object.mutableCount > 0,
+      let player = object.player as? MutableWAVPlayer else { return }
+    try player.update(wave: memory.data(source, count: object.mutableCount))
   }
   private func canPlayMedia(_ object: BREWMedia) -> Bool {
     !media.values.contains {
@@ -254,6 +273,9 @@ extension BREWRuntime {
     guard !appletClosed else { throw EmulationError.appletClosed }
     // Host audio threads never touch guest registers or memory. Deliver on the guest queue.
     try pumpPCMStreams()
+    for object in media.values where object.state == 3 {
+      try refreshMutableMedia(object)
+    }
     for (handle, object) in media where object.state == 3
       && (object.classID == 0x0100_5505 || object.player?.isPlaying == false) {
       object.state = 2
@@ -440,6 +462,7 @@ extension BREWRuntime {
         cpu.r[0] = 32
         return
       }
+      try refreshMutableMedia(object)
       if let stream = object.pcmStream {
         player.stop()
         stream.ended = false

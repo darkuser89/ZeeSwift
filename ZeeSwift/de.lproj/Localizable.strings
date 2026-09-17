@@ -236,6 +236,7 @@
 "Fill window" = "Fenster ausfüllen";
 
 "Fill window stretches the image to the available width and height without adding black bars. Applies immediately while playing." = "„Fenster ausfüllen“ streckt das Bild auf die verfügbare Breite und Höhe, ohne schwarze Balken hinzuzufügen. Gilt während des Spielens sofort.";
+"The window follows the 4:3 game image while resizing, so the image is not stretched and no black bars are added." = "Das Fenster folgt beim Ändern der Größe dem 4:3-Spielbild. Das Bild wird nicht gestreckt und es entstehen keine schwarzen Balken.";
 
 /* MetalFX presentation */
 "Upscaling" = "Hochskalierung";

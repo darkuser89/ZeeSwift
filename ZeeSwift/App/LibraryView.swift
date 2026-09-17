@@ -317,20 +317,16 @@ struct DisplaySettingsView: View {
   private let msaa = MSAAPreferences()
   @State private var resolutionValue = 1
   @State private var pixelValue = 0
-  @State private var windowValue = 0
   @State private var metalFXValue = 0
   private let metalFX = MetalFXPreferences()
   @AppStorage("showFPS") private var showFPS = false
   private let resolutions = RenderResolutionPreferences()
   private let scaling = PixelScalingPreferences()
-  private let windowScaling = WindowScalingPreferences()
   private let testFPS = ProcessInfo.processInfo.environment["ZEESWIFT_TEST_FPS"] == "1"
   @AppStorage(SeparateGameWindowPreferences.storageKey) private var separateGameWindow = false
   private func load() {
     msaaValue = game.map { msaa.override(for: $0.classID)?.rawValue ?? 0 } ?? msaa.mode().rawValue
     metalFXValue = game.map { metalFX.override(for: $0.classID)?.rawValue ?? -1 } ?? metalFX.mode().rawValue
-    windowValue = game.map { windowScaling.override(for: $0.classID)?.rawValue ?? -1 }
-      ?? windowScaling.mode().rawValue
     resolutionValue = game.map { resolutions.override(for: $0.classID)?.rawValue ?? 0 }
       ?? resolutions.resolution().rawValue
     pixelValue = game.map { game in
@@ -359,16 +355,8 @@ struct DisplaySettingsView: View {
         }
       }
       Section("Window Scaling") {
-        Picker("Image size", selection: Binding(get: { windowValue }, set: { value in
-          windowValue = value
-          windowScaling.set(WindowScaling(rawValue: value), for: game?.classID)
-          onScalingChange()
-        })) {
-          if game != nil { Text("Use Global Default").tag(-1) }
-          Text("Keep aspect ratio (4:3)").tag(WindowScaling.preserveAspect.rawValue)
-          Text("Fill window").tag(WindowScaling.fill.rawValue)
-        }
-        Text("Fill window stretches the image to the available width and height without adding black bars. Applies immediately while playing.")
+        Text("Keep aspect ratio (4:3)")
+        Text("The window follows the 4:3 game image while resizing, so the image is not stretched and no black bars are added.")
           .font(.caption).foregroundStyle(.secondary)
       }
       Section("MetalFX") {

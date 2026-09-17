@@ -236,6 +236,7 @@
 "Fill window" = "Umple fereastra";
 
 "Fill window stretches the image to the available width and height without adding black bars. Applies immediately while playing." = "„Umple fereastra” întinde imaginea la lățimea și înălțimea disponibile fără a adăuga benzi negre. Se aplică imediat în timpul jocului.";
+"The window follows the 4:3 game image while resizing, so the image is not stretched and no black bars are added." = "La redimensionare, fereastra urmează imaginea jocului în format 4:3, astfel imaginea nu este întinsă și nu apar benzi negre.";
 
 /* MetalFX presentation */
 "Upscaling" = "Mărire";

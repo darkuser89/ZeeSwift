@@ -53,8 +53,10 @@ struct NativeControllerState: Sendable, Equatable {
   }
   init(gamepad: GCExtendedGamepad) {
     let pressed: [(Int, Bool)] = [
-      (0, gamepad.buttonX.isPressed), (1, gamepad.buttonA.isPressed),
-      (2, gamepad.buttonB.isPressed), (3, gamepad.buttonY.isPressed),
+      // Z-Pad labels on a PlayStation layout: 1=Cross, 2=Square,
+      // 3=Triangle, 4=Circle. Guest HID indices are ordered 4,1,2,3.
+      (0, gamepad.buttonB.isPressed), (1, gamepad.buttonA.isPressed),
+      (2, gamepad.buttonX.isPressed), (3, gamepad.buttonY.isPressed),
       (4, gamepad.leftShoulder.isPressed || gamepad.leftTrigger.isPressed),
       (5, gamepad.rightShoulder.isPressed || gamepad.rightTrigger.isPressed),
       (8, gamepad.buttonMenu.isPressed || gamepad.buttonHome?.isPressed == true),

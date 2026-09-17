@@ -236,6 +236,7 @@
 "Fill window" = "Fill window";
 
 "Fill window stretches the image to the available width and height without adding black bars. Applies immediately while playing." = "Fill window stretches the image to the available width and height without adding black bars. Applies immediately while playing.";
+"The window follows the 4:3 game image while resizing, so the image is not stretched and no black bars are added." = "The window follows the 4:3 game image while resizing, so the image is not stretched and no black bars are added.";
 
 "Anti-Aliasing" = "Anti-Aliasing";
 "Smooths 3D geometry edges. Applies when the game next starts. Higher sample counts use more GPU memory and processing time." = "Smooths 3D geometry edges. Applies when the game next starts. Higher sample counts use more GPU memory and processing time.";

@@ -60,12 +60,16 @@ enum ControllerTarget: String, CaseIterable, Codable, Identifiable, Sendable {
   }
   func button(classID: UInt32) -> Int? {
     // The original Zeebo interface assigns printed buttons 1,2,3,4 to HID indices 1,2,3,0.
-    switch self {
+    // Some shipped games bypass the Zeebo remapping helper and interpret the raw
+    // nButtonID as the printed 0-based face-button number. Keep the host-facing
+    // labels stable while adapting only those verified titles at this boundary.
+    let sequentialFaces = ControllerMapping.sequentialFaceButtonClasses.contains(classID)
+    return switch self {
     case .none: nil
-    case .one: 1
-    case .two: 2
-    case .three: 3
-    case .four: 0
+    case .one: sequentialFaces ? 0 : 1
+    case .two: sequentialFaces ? 1 : 2
+    case .three: sequentialFaces ? 2 : 3
+    case .four: sequentialFaces ? 3 : 0
     case .zl: 4
     case .zr: 5
     case .home: ControllerMapping.defaultHomeButton(classID: classID)
@@ -112,6 +116,23 @@ struct ControllerMapping: Codable, Equatable, Sendable {
   var invertRightX = false
   var invertRightY = false
   static let standard = ControllerMapping()
+  /// Titles verified to consume raw face-button IDs 0...3 instead of the
+  /// Zeebo Z-Pad's printed-button UID permutation. This keeps Cross/A mapped to
+  /// logical Zeebo 1 consistently without changing the emulated HID ABI.
+  static let sequentialFaceButtonClasses: Set<UInt32> = [
+    0x0104_13c3, // Ultimate Chess 3D
+    0x0107_3825, // Alpine Racer
+    0x0108_7b73, // Ridge Racer
+    0x0108_d1b7, // Tekken 2
+    0x0108_fab8, // Galaxy on Fire
+    0x0108_ff16, // Zeebo Sports Queimada
+    0x0109_24dd, 0x0109_24de, 0x0109_24df, 0x0109_24e0, 0x0109_24e1,
+    0x0109_24e2, 0x0109_24e3, 0x0109_24e4, // Data East arcade collection
+    0x0109_40da, // Disney All Star Cards
+    0x0109_5146, // Toy Raid
+    0x0109_ec1b, 0x0109_ec1c, // Data East arcade collection
+    0x010a_1241, // Powerboat Challenge
+  ]
   static func defaultHomeButton(classID: UInt32) -> Int {
     // Original-game input probes establish these defaults; explicit user targets bypass them.
     // Ultimate Chess uses its Zeebo 1/back action for the in-game menu.
@@ -123,9 +144,9 @@ struct ControllerMapping: Codable, Equatable, Sendable {
     if let target = buttons[input] { return target }
     switch input {
     case .south: return .one
-    case .east: return .two
+    case .east: return .four
     case .north: return .three
-    case .west: return .four
+    case .west: return .two
     case .leftShoulder, .leftTrigger: return .zl
     case .rightShoulder, .rightTrigger: return .zr
     case .menu, .home: return .home

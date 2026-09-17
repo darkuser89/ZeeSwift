@@ -58,7 +58,7 @@ final class BREWRuntime {
       "IImageDecoder", "IForceFeed", "ImageBitmap", "IImage", "IMediaUtil", "IMemAStream", "ISound", "ILicense",
       "IGLES11Ext", "GLExtensions",
       "IGLESImageonExt", "ITransform", "IHash", "ICipherFactory", "ICipher1", "IWeb", "ITextCtl", "IHashCtx", "INetMgr", "ISQL", "IRootForm", "IStatic", "IMenuCtl", "IWidget", "IValueModel", "ICM", "IVectorModel", "IInterfaceModel", "IXYContainer", "ICanvas", "ViewportContainer",
-      "IFont", "IConfig",
+      "IFont", "IConfig", "ISourceUtil", "ISource",
     ]
   private(set) var calls: [String: Int] = [:]
   var useJIT = true
@@ -278,6 +278,8 @@ final class BREWRuntime {
   var vibrationOwner: UInt32?
   var vibrationDeadline: UInt64?
   var memoryStreams: [UInt32: BREWMemoryStream] = [:]
+  var sourceUtilities: [UInt32: UInt32] = [:]
+  var memorySources: [UInt32: BREWMemorySource] = [:]
   var mediaUtilities: [UInt32: UInt32] = [:]
   var mediaNotifications: [BREWMediaNotification] = []
   var graphicsState: [UInt32: UInt32] = [:]
@@ -1322,6 +1324,7 @@ final class BREWRuntime {
         case 0x0100_1056: object = try createSound()
         case 0x0100_1027: object = try createConfig()
         case 0x0100_100c: object = try createMemoryStream()
+        case 0x0100_1011: object = try createSourceUtility()
         case 0x0100_100f: object = try createLicense()
         case 0x0100_1017: object = try createThread()
         case 0x0100_1002: object = heapObject
@@ -1476,7 +1479,8 @@ final class BREWRuntime {
         try drawText()
         cpu.r[0] = 0
       case 0x14:
-        try fillRectangle(cpu.r[1], color: cpu.r[3])
+        try drawRectangle(cpu.r[1], frameColor: cpu.r[2], fillColor: cpu.r[3],
+          flags: try argument(4))
         cpu.r[0] = 0
       case 0x28:
         let slot = 0x2800 + cpu.r[1]
@@ -1842,6 +1846,10 @@ final class BREWRuntime {
       try dispatchFont(offset)
     } else if api == 0xf035_0000 {
       try dispatchConfig(offset)
+    } else if api == 0xf036_0000 {
+      try dispatchSourceUtility(offset)
+    } else if api == 0xf037_0000 {
+      try dispatchMemorySource(offset)
     } else if api == 0xf02a_0000 {
       try dispatchStaticControl(offset)
     } else if api == 0xf02b_0000 {
@@ -1951,7 +1959,9 @@ final class BREWRuntime {
       "File saved: \(path), \(data.count) bytes\(saveStore == nil ? " (session)" : " (persistent)")"
     )
   }
-  func fillRectangle(_ rectangle: UInt32, color: UInt32) throws {
+  func drawRectangle(_ rectangle: UInt32, frameColor: UInt32, fillColor: UInt32,
+    flags: UInt32) throws
+  {
     let layout = try bitmapLayout(displayDestination)
     let clip = try currentDisplayClip()
     var x = 0
@@ -1970,10 +1980,23 @@ final class BREWRuntime {
     let top = max(clip.y, y)
     let bottom = min(clip.y + clip.w, y + height)
     guard right > left, bottom > top else { return }
-    let pixel = try bitmapNative(color, layout)
+
+    // IDisplay.DrawRect uses independent frame/fill bits. Several games draw
+    // sprites or text first and then issue a frame-only call. Treating that call
+    // as a solid fill erases everything inside the rectangle.
+    let drawsFrame = flags & 1 != 0
+    let drawsFill = flags & 2 != 0
+    guard drawsFrame || drawsFill else { return }
+    let framePixel = drawsFrame ? try bitmapNative(frameColor, layout) : 0
+    let fillPixel = drawsFill ? try bitmapNative(fillColor, layout) : 0
     for row in top..<bottom {
       for col in left..<right {
-        try bitmapWritePixel(layout, col, row, pixel)
+        let edge = col == x || col == x + width - 1 || row == y || row == y + height - 1
+        if drawsFrame && edge {
+          try bitmapWritePixel(layout, col, row, framePixel)
+        } else if drawsFill {
+          try bitmapWritePixel(layout, col, row, fillPixel)
+        }
       }
     }
   }

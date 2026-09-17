@@ -78,6 +78,36 @@ enum WindowScaling: Int, CaseIterable, Identifiable {
   var id: Int { rawValue }
 }
 
+/// Keeps a 4:3 game surface flush with a resizable window while allowing fixed
+/// interface chrome (for example the embedded player's toolbar) above it.
+struct GameWindowAspectSizing {
+  static let ratio: CGFloat = 4 / 3
+  static func fittedContentSize(current: CGSize, game: CGSize,
+    previous: CGSize? = nil, preferGameHeight: Bool = false) -> CGSize {
+    guard current.width > 0, current.height > 0, game.width > 0, game.height > 0 else {
+      return current
+    }
+    let horizontalChrome = max(0, current.width - game.width)
+    let verticalChrome = max(0, current.height - game.height)
+    let widthLeads: Bool
+    if preferGameHeight {
+      widthLeads = false
+    } else if let previous {
+      let widthChange = abs(current.width - previous.width)
+      let heightChange = abs(current.height - previous.height)
+      widthLeads = widthChange >= heightChange * ratio
+    } else {
+      widthLeads = true
+    }
+    if widthLeads {
+      let gameWidth = max(1, current.width - horizontalChrome)
+      return CGSize(width: current.width, height: gameWidth / ratio + verticalChrome)
+    }
+    let gameHeight = max(1, current.height - verticalChrome)
+    return CGSize(width: gameHeight * ratio + horizontalChrome, height: current.height)
+  }
+}
+
 struct WindowScalingPreferences {
   private let defaults: UserDefaults
   init(defaults: UserDefaults = .standard) { self.defaults = defaults }

@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09AC5CF2BEF07C3EC1D33766 /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABAF8E2C96B1CBCC4DC6BE /* LibraryModel.swift */; };
+		119BEC8155A46E6C838AAC24 /* BREWForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E3B868998DB62B95C13DE9 /* BREWForms.swift */; };
+		11F1DBAFCD03E7C2B4F2FFBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7B19D9FB8B88A8DDBDBCB84 /* InfoPlist.strings */; };
+		1374F7C261CC26160572AB77 /* BREWPCMStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B12F63D4A30111750BB33B9 /* BREWPCMStream.swift */; };
+		1C6090FC75D0D0E12938A95E /* GameLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8279F9ECA90C83635F2C001 /* GameLibrary.swift */; };
+		209CC36A2739EE406949FA47 /* BREWGL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1366C5E0E52C45B9747E3416 /* BREWGL.swift */; };
+		20B604A74E7A84B5112F20C2 /* BREWUnzip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640AD38E49AF1F26FB71771D /* BREWUnzip.swift */; };
+		2196DD39DF352BA1A5B0677B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FD66EE48AA1392E0C1F29F9 /* Assets.xcassets */; };
+		22A6A759991AA0B08929F387 /* BREWHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913AE946EAA87F830DD46BA /* BREWHID.swift */; };
+		24C5A12054964048C4B5BD22 /* BREWSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36175C1782DAD1DEBDD2AC9D /* BREWSignal.swift */; };
+		2C6CA6FD1E84BCB7E643EF97 /* BREWFileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF66D597719F7AF46D986F /* BREWFileSystem.swift */; };
+		2E1C39EE90FFD404C6133489 /* Metal4Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245AD8166296B3265636B520 /* Metal4Renderer.swift */; };
+		2EF730136901FCD97743F4EA /* ZIPArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6AA42A7F2E071651A8DBF /* ZIPArchive.swift */; };
+		2F1E1E896B6DCB8EF8C89A75 /* PCMStreamPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CE518F2CF7F126F04183B8 /* PCMStreamPlayer.swift */; };
+		30FC801DA99638FC07921929 /* BREWMemoryStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4935A3CBAD4B2FFE4886BC /* BREWMemoryStream.swift */; };
+		31E8DCBF5FF8B6BB5BB72EC2 /* NativeControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580CD83BE641A226D2ACC97 /* NativeControllers.swift */; };
+		395F54BA36C970FA076CB3C1 /* BREWHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF348A6946F233D8174FA57 /* BREWHash.swift */; };
+		3BCA649DF73FB0CE056BCBE1 /* PalettedTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEF42A4FDE26AA39F9EE21 /* PalettedTexture.swift */; };
+		3BD4CDC20C065FED6CD7C6DE /* MIDIAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F55ECD4FFD8A45914D11ADC /* MIDIAudioPlayer.swift */; };
+		5436B779D5911561C3D6D748 /* ARM64JIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AF21BE83195CAAF0DA901 /* ARM64JIT.swift */; };
+		589755EDBA0C820D3E2280FC /* BREWMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D333AD65C1D7680F5DACEED /* BREWMedia.swift */; };
+		59EB4C80B6B6B2F3E4A47295 /* BREWWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F566A1D8CAFE4ADFB6B1AFDC /* BREWWeb.swift */; };
+		5C05661F69F3B56EA19436CC /* BREWLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DA0961047009838FA3E1D1 /* BREWLicense.swift */; };
+		60791B070041E1208E85C8D5 /* BREWText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B1EB8CC10812096DEB404 /* BREWText.swift */; };
+		60B7D1706B3576B923644604 /* BREWBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9765390D4A78D3DA5691CF6 /* BREWBuffer.swift */; };
+		67BE29D038F66D1BD8A8F9DD /* BREWGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842005336D34DDB7E0846781 /* BREWGraphics.swift */; };
+		6D18363223B58F5C1A3BA7A1 /* BREWModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CC40E6597B1D7D4169F996 /* BREWModule.swift */; };
+		720312056EFA337735EB0136 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE1DCB39C425795700E3D0 /* Support.swift */; };
+		7239CAD9020801F75C0E3F59 /* BREWQGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C611E25FC0360E35FCF9F5A /* BREWQGraphics.swift */; };
+		797E0DFD478C4BEC95E83A50 /* ThumbCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070468B8031E34D7F240013 /* ThumbCPU.swift */; };
+		8756C792656DA9A35E54C897 /* BREWBitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67833DA316033CA23BFD3879 /* BREWBitmap.swift */; };
+		8A52C368B16FAD7B4351131F /* BREWThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D510629D3ED9D749CF0B4E1 /* BREWThread.swift */; };
+		964EA4C841C3D255EB2CCF31 /* BREWSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40942D3429369E0B336432A /* BREWSQL.swift */; };
+		975C4B04BEF978C0FB36E1E9 /* BREWSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE41E53C02295DB150B007 /* BREWSort.swift */; };
+		9DB43A967E58EFCDD00810CF /* PackedPixels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED9FDD4814E5246C033F5A /* PackedPixels.swift */; };
+		A029C25EFA53A9ABFFFC160B /* GLESState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F0D19EC0636C5B2E45344 /* GLESState.swift */; };
+		A4FE70CFDF80562F4EADA3CE /* GuestMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFB844FAEEB364F5655B27 /* GuestMemory.swift */; };
+		AC41D7225D230D8D75922CA1 /* NativeControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C5D99DACD3E2DF4EF2F867 /* NativeControllerState.swift */; };
+		AC5E9FFDD9A3E2504F3552F7 /* BREWTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270EA327ED9014B2EBA78A61 /* BREWTransform.swift */; };
+		ADB9CE7D5F78C87A08A3F10E /* Metal4GLESRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5506AAEECA1D40231396A /* Metal4GLESRenderer.swift */; };
+		B3C384172E674BCD49788D69 /* ATCTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CB195E16296DAAACE890B7 /* ATCTexture.swift */; };
+		B4AE763167F46AE41A8A6305 /* BREWTextControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993978D284735FEDA61401E4 /* BREWTextControl.swift */; };
+		BDFBC925AC341F9899CC76E4 /* ARMCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDDAD3680AC1F4572D3950 /* ARMCPU.swift */; };
+		C17FB65517B936B383AE2FD6 /* ZeeSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6948A00454AA1E1FD222CFF /* ZeeSwiftApp.swift */; };
+		C3A98FBE111E6BE99C7E658A /* BREWJPEG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1D23561D08AA624124742F /* BREWJPEG.swift */; };
+		CA4CCD3692F5D8CA021D9A0C /* BREWImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EE3771FBF0DF66CFB1B48 /* BREWImage.swift */; };
+		CCA86FEB72DCEA0FC6A71C2B /* ControllerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF40857FF03D556B9B23D985 /* ControllerSettingsView.swift */; };
+		D0EBDB013D5EF0EF049421AF /* GameSaveStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C626821DA1268577B76369A /* GameSaveStore.swift */; };
+		D28AAA94100040E499AD0001 /* RenderResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28AAA94100040E499AD0002 /* RenderResolution.swift */; };
+		D44838E2168C0743182DAAB5 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740C8292ECE7ACCC6958C898 /* FrameStore.swift */; };
+		DB047BB4384AB4D669D3CD12 /* BREWEGL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E774B974B7013567A1CC4ECE /* BREWEGL.swift */; };
+		DB514AD32DF9122F52AD2079 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781AF2D81A4B74677AD4EDC1 /* LibraryView.swift */; };
+		DF337167D31924E8456E2F87 /* BREWSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3B776426B4B6963842E77D /* BREWSound.swift */; };
+		EC8E5F1BBB630A0F93A648D0 /* EmulationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042FEED7AE7C2B785A111E2 /* EmulationSession.swift */; };
+		EDCB56822F571EA8E48CC3C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E959B45780B38E84808680DB /* Localizable.strings */; };
+		F07FE2F71C2C54F0FB28F0C8 /* BREWRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA218569581DDD196935B59E /* BREWRuntime.swift */; };
+		F08C037EA990E13F86E8EE95 /* BREWCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6667AFADE8495DDC01224 /* BREWCipher.swift */; };
+		F54D8234D6D3C608B0F96B21 /* ControllerMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122FE97A9C2F9543D0503EDF /* ControllerMapping.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03A5506AAEECA1D40231396A /* Metal4GLESRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal4GLESRenderer.swift; sourceTree = "<group>"; };
+		0C3B776426B4B6963842E77D /* BREWSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWSound.swift; sourceTree = "<group>"; };
+		0C626821DA1268577B76369A /* GameSaveStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSaveStore.swift; sourceTree = "<group>"; };
+		122FE97A9C2F9543D0503EDF /* ControllerMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerMapping.swift; sourceTree = "<group>"; };
+		1366C5E0E52C45B9747E3416 /* BREWGL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWGL.swift; sourceTree = "<group>"; };
+		13CEF42A4FDE26AA39F9EE21 /* PalettedTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalettedTexture.swift; sourceTree = "<group>"; };
+		1C1D23561D08AA624124742F /* BREWJPEG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWJPEG.swift; sourceTree = "<group>"; };
+		1D333AD65C1D7680F5DACEED /* BREWMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWMedia.swift; sourceTree = "<group>"; };
+		21C5D99DACD3E2DF4EF2F867 /* NativeControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeControllerState.swift; sourceTree = "<group>"; };
+		21DE1DCB39C425795700E3D0 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		245AD8166296B3265636B520 /* Metal4Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal4Renderer.swift; sourceTree = "<group>"; };
+		270EA327ED9014B2EBA78A61 /* BREWTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWTransform.swift; sourceTree = "<group>"; };
+		27ABAF8E2C96B1CBCC4DC6BE /* LibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
+		2B12F63D4A30111750BB33B9 /* BREWPCMStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWPCMStream.swift; sourceTree = "<group>"; };
+		2D4935A3CBAD4B2FFE4886BC /* BREWMemoryStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWMemoryStream.swift; sourceTree = "<group>"; };
+		2D510629D3ED9D749CF0B4E1 /* BREWThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWThread.swift; sourceTree = "<group>"; };
+		3042FEED7AE7C2B785A111E2 /* EmulationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulationSession.swift; sourceTree = "<group>"; };
+		3580CD83BE641A226D2ACC97 /* NativeControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeControllers.swift; sourceTree = "<group>"; };
+		36175C1782DAD1DEBDD2AC9D /* BREWSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWSignal.swift; sourceTree = "<group>"; };
+		36C6667AFADE8495DDC01224 /* BREWCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWCipher.swift; sourceTree = "<group>"; };
+		3CBFB844FAEEB364F5655B27 /* GuestMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestMemory.swift; sourceTree = "<group>"; };
+		4070468B8031E34D7F240013 /* ThumbCPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbCPU.swift; sourceTree = "<group>"; };
+		46CE518F2CF7F126F04183B8 /* PCMStreamPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCMStreamPlayer.swift; sourceTree = "<group>"; };
+		53DDDAD3680AC1F4572D3950 /* ARMCPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMCPU.swift; sourceTree = "<group>"; };
+		577ACCDDB1B99F4D743AB5B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		59D11C6B66781774FE5548A2 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5AED58AD8E187D0E98CD4390 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5F82BA9EAE2798178421BC0F /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		640AD38E49AF1F26FB71771D /* BREWUnzip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWUnzip.swift; sourceTree = "<group>"; };
+		67833DA316033CA23BFD3879 /* BREWBitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWBitmap.swift; sourceTree = "<group>"; };
+		6F55ECD4FFD8A45914D11ADC /* MIDIAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIAudioPlayer.swift; sourceTree = "<group>"; };
+		740C8292ECE7ACCC6958C898 /* FrameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameStore.swift; sourceTree = "<group>"; };
+		76ED9FDD4814E5246C033F5A /* PackedPixels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackedPixels.swift; sourceTree = "<group>"; };
+		781AF2D81A4B74677AD4EDC1 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		7C611E25FC0360E35FCF9F5A /* BREWQGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWQGraphics.swift; sourceTree = "<group>"; };
+		80DA0961047009838FA3E1D1 /* BREWLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWLicense.swift; sourceTree = "<group>"; };
+		83DF66D597719F7AF46D986F /* BREWFileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWFileSystem.swift; sourceTree = "<group>"; };
+		842005336D34DDB7E0846781 /* BREWGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWGraphics.swift; sourceTree = "<group>"; };
+		8D0EE3771FBF0DF66CFB1B48 /* BREWImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWImage.swift; sourceTree = "<group>"; };
+		8D7E9F58941884B2813AEAA4 /* ZeeSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeeSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EE6AA42A7F2E071651A8DBF /* ZIPArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIPArchive.swift; sourceTree = "<group>"; };
+		8FD66EE48AA1392E0C1F29F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9728985E4D87E6AB521F764C /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9913AE946EAA87F830DD46BA /* BREWHID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWHID.swift; sourceTree = "<group>"; };
+		993978D284735FEDA61401E4 /* BREWTextControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWTextControl.swift; sourceTree = "<group>"; };
+		A050112AA48A3B3453E48C44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A09B1EB8CC10812096DEB404 /* BREWText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWText.swift; sourceTree = "<group>"; };
+		A6948A00454AA1E1FD222CFF /* ZeeSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeeSwiftApp.swift; sourceTree = "<group>"; };
+		AEF348A6946F233D8174FA57 /* BREWHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWHash.swift; sourceTree = "<group>"; };
+		BF2B05F0A5A2F62D39C8642D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C6CC40E6597B1D7D4169F996 /* BREWModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWModule.swift; sourceTree = "<group>"; };
+		C8279F9ECA90C83635F2C001 /* GameLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibrary.swift; sourceTree = "<group>"; };
+		CA2AF21BE83195CAAF0DA901 /* ARM64JIT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARM64JIT.swift; sourceTree = "<group>"; };
+		D28AAA94100040E499AD0002 /* RenderResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderResolution.swift; sourceTree = "<group>"; };
+		DF40857FF03D556B9B23D985 /* ControllerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerSettingsView.swift; sourceTree = "<group>"; };
+		E1A561B6FDBFE6B764670AB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E1CB195E16296DAAACE890B7 /* ATCTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCTexture.swift; sourceTree = "<group>"; };
+		E40942D3429369E0B336432A /* BREWSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWSQL.swift; sourceTree = "<group>"; };
+		E774B974B7013567A1CC4ECE /* BREWEGL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWEGL.swift; sourceTree = "<group>"; };
+		EA218569581DDD196935B59E /* BREWRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWRuntime.swift; sourceTree = "<group>"; };
+		F01F0D19EC0636C5B2E45344 /* GLESState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLESState.swift; sourceTree = "<group>"; };
+		F566A1D8CAFE4ADFB6B1AFDC /* BREWWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWWeb.swift; sourceTree = "<group>"; };
+		F9765390D4A78D3DA5691CF6 /* BREWBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWBuffer.swift; sourceTree = "<group>"; };
+		F9E3B868998DB62B95C13DE9 /* BREWForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWForms.swift; sourceTree = "<group>"; };
+		FEDE41E53C02295DB150B007 /* BREWSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREWSort.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0751CD078C56031C33D35C90 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF40857FF03D556B9B23D985 /* ControllerSettingsView.swift */,
+				3042FEED7AE7C2B785A111E2 /* EmulationSession.swift */,
+				27ABAF8E2C96B1CBCC4DC6BE /* LibraryModel.swift */,
+				781AF2D81A4B74677AD4EDC1 /* LibraryView.swift */,
+				3580CD83BE641A226D2ACC97 /* NativeControllers.swift */,
+				A6948A00454AA1E1FD222CFF /* ZeeSwiftApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3C5574AC858A4D26C4F33F50 = {
+			isa = PBXGroup;
+			children = (
+				B33B86C4C08355041B8B185A /* ZeeSwift */,
+				A06DF6E844F14CCE0DAC31CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D9DBF15BE25182D4D29B03B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CA2AF21BE83195CAAF0DA901 /* ARM64JIT.swift */,
+				53DDDAD3680AC1F4572D3950 /* ARMCPU.swift */,
+				E1CB195E16296DAAACE890B7 /* ATCTexture.swift */,
+				67833DA316033CA23BFD3879 /* BREWBitmap.swift */,
+				F9765390D4A78D3DA5691CF6 /* BREWBuffer.swift */,
+				36C6667AFADE8495DDC01224 /* BREWCipher.swift */,
+				E774B974B7013567A1CC4ECE /* BREWEGL.swift */,
+				83DF66D597719F7AF46D986F /* BREWFileSystem.swift */,
+				F9E3B868998DB62B95C13DE9 /* BREWForms.swift */,
+				1366C5E0E52C45B9747E3416 /* BREWGL.swift */,
+				842005336D34DDB7E0846781 /* BREWGraphics.swift */,
+				AEF348A6946F233D8174FA57 /* BREWHash.swift */,
+				9913AE946EAA87F830DD46BA /* BREWHID.swift */,
+				8D0EE3771FBF0DF66CFB1B48 /* BREWImage.swift */,
+				1C1D23561D08AA624124742F /* BREWJPEG.swift */,
+				80DA0961047009838FA3E1D1 /* BREWLicense.swift */,
+				1D333AD65C1D7680F5DACEED /* BREWMedia.swift */,
+				2D4935A3CBAD4B2FFE4886BC /* BREWMemoryStream.swift */,
+				C6CC40E6597B1D7D4169F996 /* BREWModule.swift */,
+				2B12F63D4A30111750BB33B9 /* BREWPCMStream.swift */,
+				7C611E25FC0360E35FCF9F5A /* BREWQGraphics.swift */,
+				EA218569581DDD196935B59E /* BREWRuntime.swift */,
+				36175C1782DAD1DEBDD2AC9D /* BREWSignal.swift */,
+				FEDE41E53C02295DB150B007 /* BREWSort.swift */,
+				0C3B776426B4B6963842E77D /* BREWSound.swift */,
+				E40942D3429369E0B336432A /* BREWSQL.swift */,
+				A09B1EB8CC10812096DEB404 /* BREWText.swift */,
+				993978D284735FEDA61401E4 /* BREWTextControl.swift */,
+				2D510629D3ED9D749CF0B4E1 /* BREWThread.swift */,
+				270EA327ED9014B2EBA78A61 /* BREWTransform.swift */,
+				640AD38E49AF1F26FB71771D /* BREWUnzip.swift */,
+				F566A1D8CAFE4ADFB6B1AFDC /* BREWWeb.swift */,
+				122FE97A9C2F9543D0503EDF /* ControllerMapping.swift */,
+				740C8292ECE7ACCC6958C898 /* FrameStore.swift */,
+				D28AAA94100040E499AD0002 /* RenderResolution.swift */,
+				C8279F9ECA90C83635F2C001 /* GameLibrary.swift */,
+				0C626821DA1268577B76369A /* GameSaveStore.swift */,
+				F01F0D19EC0636C5B2E45344 /* GLESState.swift */,
+				3CBFB844FAEEB364F5655B27 /* GuestMemory.swift */,
+				6F55ECD4FFD8A45914D11ADC /* MIDIAudioPlayer.swift */,
+				21C5D99DACD3E2DF4EF2F867 /* NativeControllerState.swift */,
+				76ED9FDD4814E5246C033F5A /* PackedPixels.swift */,
+				13CEF42A4FDE26AA39F9EE21 /* PalettedTexture.swift */,
+				46CE518F2CF7F126F04183B8 /* PCMStreamPlayer.swift */,
+				21DE1DCB39C425795700E3D0 /* Support.swift */,
+				4070468B8031E34D7F240013 /* ThumbCPU.swift */,
+				8EE6AA42A7F2E071651A8DBF /* ZIPArchive.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7D01960C26C3DE755BE3F6AC /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				03A5506AAEECA1D40231396A /* Metal4GLESRenderer.swift */,
+				245AD8166296B3265636B520 /* Metal4Renderer.swift */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		A06DF6E844F14CCE0DAC31CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D7E9F58941884B2813AEAA4 /* ZeeSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B33B86C4C08355041B8B185A /* ZeeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				8FD66EE48AA1392E0C1F29F9 /* Assets.xcassets */,
+				5F82BA9EAE2798178421BC0F /* Bridge.h */,
+				577ACCDDB1B99F4D743AB5B8 /* Info.plist */,
+				0751CD078C56031C33D35C90 /* App */,
+				5D9DBF15BE25182D4D29B03B /* Core */,
+				7D01960C26C3DE755BE3F6AC /* Graphics */,
+				C7B19D9FB8B88A8DDBDBCB84 /* InfoPlist.strings */,
+				E959B45780B38E84808680DB /* Localizable.strings */,
+			);
+			path = ZeeSwift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8256E8A7867A29004D48E29B /* ZeeSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DE8C29CF1BDE984A439A1C1 /* Build configuration list for PBXNativeTarget "ZeeSwift" */;
+			buildPhases = (
+				E1BDB3A2E6202820B5200086 /* Sources */,
+				9CF22C7B568AA1A0BB2F50D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeeSwift;
+			packageProductDependencies = (
+			);
+			productName = ZeeSwift;
+			productReference = 8D7E9F58941884B2813AEAA4 /* ZeeSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7C8EC804453CCF876D3B4C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = 3E6FB78B7ED19BA849721A32 /* Build configuration list for PBXProject "ZeeSwift" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				de,
+				en,
+				ro,
+			);
+			mainGroup = 3C5574AC858A4D26C4F33F50;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A06DF6E844F14CCE0DAC31CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8256E8A7867A29004D48E29B /* ZeeSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CF22C7B568AA1A0BB2F50D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2196DD39DF352BA1A5B0677B /* Assets.xcassets in Resources */,
+				11F1DBAFCD03E7C2B4F2FFBF /* InfoPlist.strings in Resources */,
+				EDCB56822F571EA8E48CC3C2 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1BDB3A2E6202820B5200086 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5436B779D5911561C3D6D748 /* ARM64JIT.swift in Sources */,
+				BDFBC925AC341F9899CC76E4 /* ARMCPU.swift in Sources */,
+				B3C384172E674BCD49788D69 /* ATCTexture.swift in Sources */,
+				8756C792656DA9A35E54C897 /* BREWBitmap.swift in Sources */,
+				60B7D1706B3576B923644604 /* BREWBuffer.swift in Sources */,
+				F08C037EA990E13F86E8EE95 /* BREWCipher.swift in Sources */,
+				DB047BB4384AB4D669D3CD12 /* BREWEGL.swift in Sources */,
+				2C6CA6FD1E84BCB7E643EF97 /* BREWFileSystem.swift in Sources */,
+				119BEC8155A46E6C838AAC24 /* BREWForms.swift in Sources */,
+				209CC36A2739EE406949FA47 /* BREWGL.swift in Sources */,
+				67BE29D038F66D1BD8A8F9DD /* BREWGraphics.swift in Sources */,
+				22A6A759991AA0B08929F387 /* BREWHID.swift in Sources */,
+				395F54BA36C970FA076CB3C1 /* BREWHash.swift in Sources */,
+				CA4CCD3692F5D8CA021D9A0C /* BREWImage.swift in Sources */,
+				C3A98FBE111E6BE99C7E658A /* BREWJPEG.swift in Sources */,
+				5C05661F69F3B56EA19436CC /* BREWLicense.swift in Sources */,
+				589755EDBA0C820D3E2280FC /* BREWMedia.swift in Sources */,
+				30FC801DA99638FC07921929 /* BREWMemoryStream.swift in Sources */,
+				6D18363223B58F5C1A3BA7A1 /* BREWModule.swift in Sources */,
+				1374F7C261CC26160572AB77 /* BREWPCMStream.swift in Sources */,
+				7239CAD9020801F75C0E3F59 /* BREWQGraphics.swift in Sources */,
+				F07FE2F71C2C54F0FB28F0C8 /* BREWRuntime.swift in Sources */,
+				964EA4C841C3D255EB2CCF31 /* BREWSQL.swift in Sources */,
+				24C5A12054964048C4B5BD22 /* BREWSignal.swift in Sources */,
+				975C4B04BEF978C0FB36E1E9 /* BREWSort.swift in Sources */,
+				DF337167D31924E8456E2F87 /* BREWSound.swift in Sources */,
+				60791B070041E1208E85C8D5 /* BREWText.swift in Sources */,
+				B4AE763167F46AE41A8A6305 /* BREWTextControl.swift in Sources */,
+				8A52C368B16FAD7B4351131F /* BREWThread.swift in Sources */,
+				AC5E9FFDD9A3E2504F3552F7 /* BREWTransform.swift in Sources */,
+				20B604A74E7A84B5112F20C2 /* BREWUnzip.swift in Sources */,
+				59EB4C80B6B6B2F3E4A47295 /* BREWWeb.swift in Sources */,
+				F54D8234D6D3C608B0F96B21 /* ControllerMapping.swift in Sources */,
+				CCA86FEB72DCEA0FC6A71C2B /* ControllerSettingsView.swift in Sources */,
+				EC8E5F1BBB630A0F93A648D0 /* EmulationSession.swift in Sources */,
+				D44838E2168C0743182DAAB5 /* FrameStore.swift in Sources */,
+				D28AAA94100040E499AD0001 /* RenderResolution.swift in Sources */,
+				A029C25EFA53A9ABFFFC160B /* GLESState.swift in Sources */,
+				1C6090FC75D0D0E12938A95E /* GameLibrary.swift in Sources */,
+				D0EBDB013D5EF0EF049421AF /* GameSaveStore.swift in Sources */,
+				A4FE70CFDF80562F4EADA3CE /* GuestMemory.swift in Sources */,
+				09AC5CF2BEF07C3EC1D33766 /* LibraryModel.swift in Sources */,
+				DB514AD32DF9122F52AD2079 /* LibraryView.swift in Sources */,
+				3BD4CDC20C065FED6CD7C6DE /* MIDIAudioPlayer.swift in Sources */,
+				ADB9CE7D5F78C87A08A3F10E /* Metal4GLESRenderer.swift in Sources */,
+				2E1C39EE90FFD404C6133489 /* Metal4Renderer.swift in Sources */,
+				AC41D7225D230D8D75922CA1 /* NativeControllerState.swift in Sources */,
+				31E8DCBF5FF8B6BB5BB72EC2 /* NativeControllers.swift in Sources */,
+				2F1E1E896B6DCB8EF8C89A75 /* PCMStreamPlayer.swift in Sources */,
+				9DB43A967E58EFCDD00810CF /* PackedPixels.swift in Sources */,
+				3BCA649DF73FB0CE056BCBE1 /* PalettedTexture.swift in Sources */,
+				720312056EFA337735EB0136 /* Support.swift in Sources */,
+				797E0DFD478C4BEC95E83A50 /* ThumbCPU.swift in Sources */,
+				2EF730136901FCD97743F4EA /* ZIPArchive.swift in Sources */,
+				C17FB65517B936B383AE2FD6 /* ZeeSwiftApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7B19D9FB8B88A8DDBDBCB84 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AED58AD8E187D0E98CD4390 /* de */,
+				E1A561B6FDBFE6B764670AB6 /* en */,
+				59D11C6B66781774FE5548A2 /* ro */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E959B45780B38E84808680DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF2B05F0A5A2F62D39C8642D /* de */,
+				A050112AA48A3B3453E48C44 /* en */,
+				9728985E4D87E6AB521F764C /* ro */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C4FE52A4961C144AF63B8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = ZeeSwift/Bridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		451917C0DA372106D5D13666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = ZeeSwift/Bridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8D6D329BF7FC2DC52D4C72D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZeeSwift/ZeeSwift.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZeeSwift/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ZeeSwift;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.ZeeSwift.app;
+			};
+			name = Debug;
+		};
+		D64608FAD798DC56A5D8672D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZeeSwift/ZeeSwift.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZeeSwift/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ZeeSwift;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.ZeeSwift.app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E6FB78B7ED19BA849721A32 /* Build configuration list for PBXProject "ZeeSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C4FE52A4961C144AF63B8D6 /* Debug */,
+				451917C0DA372106D5D13666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5DE8C29CF1BDE984A439A1C1 /* Build configuration list for PBXNativeTarget "ZeeSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D6D329BF7FC2DC52D4C72D6 /* Debug */,
+				D64608FAD798DC56A5D8672D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7C8EC804453CCF876D3B4C6 /* Project object */;
+}
