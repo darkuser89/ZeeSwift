@@ -1,0 +1,248 @@
+"System Default" = "Systemstandard";
+"English" = "Englisch";
+"German" = "Deutsch";
+"Romanian" = "Rumänisch";
+"Add Games …" = "Spiele hinzufügen …";
+"Open a game ZIP" = "Spiel-ZIP öffnen";
+"Standalone Zeebo HLE emulator · Work in progress" = "Eigenständiger Zeebo-HLE-Emulator · Entwicklungsstand";
+"No game loaded yet." = "Noch kein Spiel geladen.";
+"No controller connected" = "Kein Controller verbunden";
+"%@: The ZIP file could not be found. Add it again to update its location." = "%@: Die ZIP-Datei wurde nicht gefunden. Füge sie erneut hinzu, um ihren Speicherort zu aktualisieren.";
+"Starting game code …" = "Spielcode wird gestartet …";
+"Emulation stopped" = "Emulation gestoppt";
+"ZeeSwift-Diagnostics.txt" = "ZeeSwift-Diagnose.txt";
+"Library" = "Bibliothek";
+"Stop" = "Stopp";
+"Version %@" = "Version %@";
+"Close" = "Schließen";
+"Cross / A or Back" = "Kreuz / A oder Zurück";
+"Game: %.1f frames per second" = "Spiel: %.1f Bilder pro Sekunde";
+"Game paused" = "Spiel angehalten";
+"Settings" = "Einstellungen";
+"General" = "Allgemein";
+"Display" = "Bild";
+"Controller" = "Controller";
+"Diagnostics" = "Diagnose";
+"Language" = "Sprache";
+"App language" = "App-Sprache";
+"System Default follows the preferred macOS language when it is English, German, or Romanian. Other languages use English." = "Systemstandard folgt der bevorzugten macOS-Sprache, wenn sie Englisch, Deutsch oder Rumänisch ist. Für andere Sprachen wird Englisch verwendet.";
+"Game" = "Spiel";
+"Open games in a separate window" = "Spiele in einem separaten Fenster öffnen";
+"The separate window shows only the game. It does not show library controls, the ZeeSwift FPS counter, errors, or diagnostics. Applies from the next game start." = "Das separate Fenster zeigt nur das Spiel. Bibliothekssteuerung, ZeeSwift-FPS-Zähler, Fehler und Diagnosen werden dort nicht eingeblendet. Gilt ab dem nächsten Spielstart.";
+"Show FPS counter" = "FPS-Zähler anzeigen";
+"The FPS counter remains enabled during a test run." = "Während eines Testlaufs bleibt der FPS-Zähler eingeschaltet.";
+"Shows the frame rate in the top-right corner while playing." = "Blendet die Bildrate oben rechts im Spiel ein.";
+"Scaling" = "Vergrößerung";
+"Pixel-perfect scaling" = "Pixelgenaue Vergrößerung";
+"Saved for “%@”. Enlarges the image without additional smoothing." = "Für „%@“ gespeichert. Vergrößert das Bild ohne zusätzliche Glättung.";
+"Start a game to configure its scaling." = "Starte ein Spiel, um seine Vergrößerung einzustellen.";
+"Runtime Diagnostics" = "Ausführungsdiagnose";
+"Save …" = "Speichern …";
+"All Games" = "Alle Spiele";
+"Favorites" = "Favoriten";
+"Recently Played" = "Zuletzt gespielt";
+"Search games" = "Spiele suchen";
+"Clear search" = "Suche löschen";
+"Name A–Z" = "Name A–Z";
+"Recently played / added" = "Zuletzt gespielt / hinzugefügt";
+"Sort order" = "Sortierung";
+"%lld game" = "%lld Spiel";
+"%lld games" = "%lld Spiele";
+"Importing games and original icons …" = "Spiele und Original-Icons werden eingelesen …";
+"Room for your games" = "Platz für deine Spiele";
+"No games found" = "Keine Spiele gefunden";
+"Add your Zeebo ZIPs or drag them into this window.\nYour games remain in their current location." = "Füge deine Zeebo-ZIPs hinzu oder ziehe sie in dieses Fenster.\nDeine Spiele bleiben an ihrem bisherigen Speicherort.";
+"Try a different search or view." = "Versuche eine andere Suche oder Ansicht.";
+"Choose Games …" = "Spiele auswählen …";
+"Play" = "Spielen";
+"Controller Mapping …" = "Controller-Belegung …";
+"Remove from Favorites" = "Aus Favoriten entfernen";
+"Mark as Favorite" = "Als Favorit markieren";
+"Show in Finder" = "Im Finder zeigen";
+"Remove from Library" = "Aus Bibliothek entfernen";
+"LIBRARY" = "BIBLIOTHEK";
+"Not played yet" = "Noch nicht gestartet";
+"Play %@" = "%@ spielen";
+"Controller mapping for %@" = "Controller-Belegung für %@";
+"Remove Favorite" = "Favorit entfernen";
+"Add Zeebo Games" = "Zeebo-Spiele hinzufügen";
+"Add" = "Hinzufügen";
+"The library could not be loaded: %@" = "Bibliothek konnte nicht geladen werden: %@";
+"Game added to the library" = "Spiel zur Bibliothek hinzugefügt";
+"%lld games added" = "%lld Spiele hinzugefügt";
+"Controller settings: %@" = "Controller-Einstellungen: %@";
+"Controller settings could not be loaded: %@" = "Controller-Einstellungen konnten nicht geladen werden: %@";
+"The mapping could not be saved: %@" = "Belegung konnte nicht gespeichert werden: %@";
+"Controller Mapping" = "Controller-Belegung";
+"Global for all games without a custom mapping" = "Global für alle Spiele ohne eigene Belegung";
+"Done" = "Fertig";
+"Player" = "Spieler";
+"Player 1" = "Spieler 1";
+"Player 2" = "Spieler 2";
+"For This Game" = "Für dieses Spiel";
+"Use Global Mapping" = "Globale Belegung verwenden";
+"Custom Mapping" = "Eigene Belegung";
+"Changes to the global mapping also apply to this game." = "Änderungen an der globalen Belegung gelten auch für dieses Spiel.";
+"Open Global Settings" = "Globale Einstellungen öffnen";
+"Input device for Player %lld" = "Eingabegerät für Spieler %lld";
+"Input" = "Steuerung";
+"Connected Device" = "Verbundenes Gerät";
+"Controller 1" = "Controller 1";
+"Controller 2" = "Controller 2";
+"Device numbers are shown in the global controller settings. When one disconnects, the other controller keeps its position." = "Die Gerätenummern stehen in den globalen Controller-Einstellungen. Beim Trennen bleibt der andere Controller auf seinem Platz.";
+"Both players share keyboard keys. Those keys control both players at the same time." = "Beide Spieler nutzen gemeinsame Tastaturtasten. Diese Tasten steuern beide Spieler gleichzeitig.";
+"Both players use the same controller. Choose different devices for separate input." = "Beide Spieler verwenden denselben Controller. Wähle unterschiedliche Geräte für getrennte Eingaben.";
+"Keyboard" = "Tastatur";
+"Click a mapping and press the desired key. Both sticks can be mapped; keyboard axes use full deflection. Shortcuts reserved by macOS remain with the system." = "Klicke eine Belegung an und drücke die gewünschte Taste. Auch beide Sticks sind belegbar; Tastaturachsen nutzen vollen Ausschlag. macOS reservierte Kurzbefehle bleiben beim System.";
+"Not Assigned" = "Nicht belegt";
+"Remove mapping" = "Belegung entfernen";
+"Choose the desired Zeebo button for each controller button. Multiple buttons may trigger the same function." = "Wähle für jede Controller-Taste die gewünschte Zeebo-Taste. Mehrere Tasten dürfen dieselbe Funktion auslösen.";
+"Action Buttons" = "Aktionstasten";
+"Shoulders and Triggers" = "Schultern und Trigger";
+"Menu and Stick Buttons" = "Menü und Stick-Tasten";
+"D-pad" = "Steuerkreuz";
+"Cross / A" = "Kreuz / A";
+"Circle / B" = "Kreis / B";
+"Triangle / Y" = "Dreieck / Y";
+"Square / X" = "Quadrat / X";
+"Options / Menu" = "Options / Menü";
+"Share / Create / View" = "Share / Create / Ansicht";
+"Press Left Stick" = "Linken Stick drücken";
+"Press Right Stick" = "Rechten Stick drücken";
+"D-pad Up" = "Steuerkreuz oben";
+"D-pad Down" = "Steuerkreuz unten";
+"D-pad Left" = "Steuerkreuz links";
+"D-pad Right" = "Steuerkreuz rechts";
+"Home / Pause (Automatic)" = "Home / Pause (automatisch)";
+"Home as Start" = "Home als Start";
+"Home as Back" = "Home als Zurück";
+"Controller and Keyboard" = "Controller und Tastatur";
+"Not Connected" = "Nicht verbunden";
+"Zeebo 1 (Additional Key)" = "Zeebo 1 (zusätzliche Taste)";
+"Left Stick ↑" = "Linker Stick ↑";
+"Left Stick ↓" = "Linker Stick ↓";
+"Left Stick ←" = "Linker Stick ←";
+"Left Stick →" = "Linker Stick →";
+"Right Stick ↑" = "Rechter Stick ↑";
+"Right Stick ↓" = "Rechter Stick ↓";
+"Right Stick ←" = "Rechter Stick ←";
+"Right Stick →" = "Rechter Stick →";
+"Analog Sticks" = "Analog-Sticks";
+"Swap left and right sticks" = "Linken und rechten Stick tauschen";
+"Left stick: invert X axis" = "Linken Stick: X-Achse umkehren";
+"Left stick: invert Y axis" = "Linken Stick: Y-Achse umkehren";
+"Right stick: invert X axis" = "Rechten Stick: X-Achse umkehren";
+"Right stick: invert Y axis" = "Rechten Stick: Y-Achse umkehren";
+"When sticks are swapped, the axes refer to the corresponding Zeebo stick." = "Bei getauschten Sticks beziehen sich die Achsen auf den jeweiligen Zeebo-Stick.";
+"Home / Pause (Automatic) uses the game's known pause button. Choose “Home as Start” or “Home as Back” to set it explicitly." = "Home / Pause (automatisch) nutzt die bekannte Pause-Taste des Spiels. Mit „Home als Start“ oder „Home als Zurück“ kannst du sie ausdrücklich festlegen.";
+"Restore Default Mapping" = "Standardbelegung wiederherstellen";
+"Use Global Mapping Again" = "Wieder globale Belegung verwenden";
+"Reload" = "Erneut laden";
+"Saved automatically. Briefly release held buttons after making a change." = "Wird automatisch gespeichert. Gehaltene Tasten nach einer Änderung kurz loslassen.";
+"Player %lld · %@" = "Spieler %lld · %@";
+"Press the desired key now" = "Jetzt die gewünschte Taste drücken";
+"Cancel" = "Abbrechen";
+"Space" = "Leertaste";
+"Enter (Numpad)" = "Enter (Ziffernblock)";
+"Delete" = "Entf";
+"Left Shift" = "Umschalt links";
+"Right Shift" = "Umschalt rechts";
+"Left Control" = "Ctrl links";
+"Right Control" = "Ctrl rechts";
+"Left Option" = "Option links";
+"Right Option" = "Option rechts";
+"Emulation running" = "Emulation läuft";
+"Emulation waiting for events" = "Emulation wartet auf Ereignisse";
+"Emulation running · %lld frames" = "Emulation läuft · %lld Bilder";
+"Game ended" = "Spiel beendet";
+"Emulation paused" = "Emulation angehalten";
+"Controller %lld: %@" = "Controller %lld: %@";
+"Connected" = "Verbunden";
+"Invalid file: %@" = "Ungültige Datei: %@";
+"Not supported yet: %@" = "Noch nicht unterstützt: %@";
+"Guest memory access outside a region: %@ (%lld bytes)" = "Gast-Speicherzugriff außerhalb einer Region: %@ (%lld Bytes)";
+"Unimplemented %@ instruction %@ at %@" = "Nicht implementierte %@-Instruktion %@ bei %@";
+"Missing HLE call: %@, return address %@" = "Fehlender HLE-Aufruf: %@, Rücksprung %@";
+"Execution budget reached at %@" = "Ausführungsbudget erreicht bei %@";
+"Guest exited (ARM semihosting, reason %@)" = "Gast beendet sich (ARM-Semihosting, Grund %@)";
+"Game FPS: %.1f · Average since start: %.1f · Measurement time: %.2f s · %@" = "Spiel-FPS: %.1f · Mittel seit Start: %.1f · Messdauer: %.2f s · %@";
+"Real time" = "Echtzeit";
+"synthetic test clock: no comparable game FPS" = "künstliche Testuhr: keine vergleichbaren Spiel-FPS";
+"ARM diagnostic output (%lld additional bytes discarded):" = "ARM-Diagnoseausgabe (%lld weitere Bytes verworfen):";
+"Phase: %@" = "Phase: %@";
+"MOD: %lld bytes, code: %@..<%@, HLE: %@" = "MOD: %lld Bytes, Code: %@..<%@, HLE: %@";
+"ARM/Thumb instructions: %lld" = "ARM/Thumb-Instruktionen: %lld";
+"Native JIT instructions: %lld" = "Native JIT-Instruktionen: %lld";
+"JIT blocks: %lld" = "JIT-Blöcke: %lld";
+"Repeated FREE calls: %lld" = "Wiederholte FREE-Aufrufe: %lld";
+"Guest frames: %lld" = "Gast-Bilder: %lld";
+"GL draw calls: %lld" = "GL-Zeichenaufrufe: %lld";
+"PC: %@" = "PC: %@";
+"HID position queries: %lld" = "HID-Positionsabfragen: %lld";
+"Timer calls: %lld" = "Timer-Aufrufe: %lld";
+"Save-game files: %lld, %lld bytes" = "Spielstanddateien: %lld, %lld Bytes";
+"Loaded" = "Geladen";
+"Applet in background" = "Applet im Hintergrund";
+"BREW module initialization" = "BREW-Modulinitialisierung";
+"Module loaded" = "Modul geladen";
+"Applet creation" = "Applet-Erzeugung";
+"Applet created" = "Applet erzeugt";
+"Leertaste" = "Leertaste";
+"Enter (Ziffernblock)" = "Enter (Ziffernblock)";
+"Entf" = "Entf";
+"Umschalt links" = "Umschalt links";
+"Umschalt rechts" = "Umschalt rechts";
+"Ctrl links" = "Ctrl links";
+"Ctrl rechts" = "Ctrl rechts";
+"Option links" = "Option links";
+"Option rechts" = "Option rechts";
+
+"Internal Resolution" = "Interne Auflösung";
+
+"Apply to" = "Anwenden auf";
+
+"All games (default)" = "Alle Spiele (Standard)";
+
+"Resolution" = "Auflösung";
+
+"Use global default (%@)" = "Globalen Standard verwenden (%@)";
+
+"Applies when the game next starts. Higher resolutions sharpen 3D geometry; original textures and 2D artwork keep their original detail." = "Gilt ab dem nächsten Spielstart. Höhere Auflösungen machen 3D-Geometrie schärfer; Originaltexturen und 2D-Grafiken behalten ihren ursprünglichen Detailgrad.";
+
+"Settings …" = "Einstellungen …";
+
+"Settings for %@" = "Einstellungen für %@";
+
+"Game Settings" = "Spieleinstellungen";
+
+"Use Global Default" = "Globalen Standard verwenden";
+
+"Enabled" = "Ein";
+
+"Disabled" = "Aus";
+
+"Enlarges the image without additional smoothing." = "Vergrößert das Bild ohne zusätzliche Glättung.";
+
+"Defaults for games without custom settings. Right-click a game in the library to configure it individually." = "Vorgaben für Spiele ohne eigene Einstellungen. Klicke in der Bibliothek mit der rechten Maustaste auf ein Spiel, um es einzeln einzustellen.";
+
+"Saved automatically for this game. Other games keep their own settings." = "Wird automatisch für dieses Spiel gespeichert. Andere Spiele behalten ihre eigenen Einstellungen.";
+
+"Window Scaling" = "Fensterskalierung";
+
+"Image size" = "Bildgröße";
+
+"Keep aspect ratio (4:3)" = "Seitenverhältnis beibehalten (4:3)";
+
+"Fill window" = "Fenster ausfüllen";
+
+"Fill window stretches the image to the available width and height without adding black bars. Applies immediately while playing." = "„Fenster ausfüllen“ streckt das Bild auf die verfügbare Breite und Höhe, ohne schwarze Balken hinzuzufügen. Gilt während des Spielens sofort.";
+
+/* MetalFX presentation */
+"Upscaling" = "Hochskalierung";
+"Upscales the game image when the window is larger than the internal resolution. Applies immediately. Pixel-perfect texture scaling remains a separate setting." = "Vergrößert das Spielbild, wenn das Fenster größer als die interne Auflösung ist. Wirkt sofort. Pixelgenaue Texturskalierung bleibt separat einstellbar.";
+"MetalFX is not supported on this Mac." = "MetalFX wird auf diesem Mac nicht unterstützt.";
+
+"Temporal uses depth and motion from 3D rendering. Images without valid temporal data use Spatial automatically." = "Temporal verwendet Tiefen- und Bewegungsdaten der 3D-Darstellung. Bilder ohne gültige Temporal-Daten verwenden automatisch Spatial.";
+
+"Anti-Aliasing" = "Kantenglättung";
+"Smooths 3D geometry edges. Applies when the game next starts. Higher sample counts use more GPU memory and processing time." = "Glättet Kanten von 3D-Objekten. Gilt ab dem nächsten Spielstart. Mehr Samples benötigen mehr GPU-Speicher und Rechenzeit.";

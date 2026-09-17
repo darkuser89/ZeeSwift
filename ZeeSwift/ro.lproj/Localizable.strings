@@ -1,0 +1,248 @@
+"System Default" = "Implicită a sistemului";
+"English" = "Engleză";
+"German" = "Germană";
+"Romanian" = "Română";
+"Add Games …" = "Adaugă jocuri …";
+"Open a game ZIP" = "Deschide arhiva ZIP a unui joc";
+"Standalone Zeebo HLE emulator · Work in progress" = "Emulator Zeebo HLE autonom · În curs de dezvoltare";
+"No game loaded yet." = "Niciun joc nu a fost încărcat încă.";
+"No controller connected" = "Niciun controler conectat";
+"%@: The ZIP file could not be found. Add it again to update its location." = "%@: Fișierul ZIP nu a putut fi găsit. Adaugă-l din nou pentru a-i actualiza locația.";
+"Starting game code …" = "Se pornește codul jocului …";
+"Emulation stopped" = "Emulare oprită";
+"ZeeSwift-Diagnostics.txt" = "ZeeSwift-Diagnosticare.txt";
+"Library" = "Bibliotecă";
+"Stop" = "Oprește";
+"Version %@" = "Versiunea %@";
+"Close" = "Închide";
+"Cross / A or Back" = "Cruce / A sau Înapoi";
+"Game: %.1f frames per second" = "Joc: %.1f cadre pe secundă";
+"Game paused" = "Joc întrerupt";
+"Settings" = "Configurări";
+"General" = "General";
+"Display" = "Afișaj";
+"Controller" = "Controler";
+"Diagnostics" = "Diagnosticare";
+"Language" = "Limbă";
+"App language" = "Limba aplicației";
+"System Default follows the preferred macOS language when it is English, German, or Romanian. Other languages use English." = "Opțiunea implicită a sistemului urmează limba preferată din macOS dacă este engleză, germană sau română. Pentru celelalte limbi se folosește engleza.";
+"Game" = "Joc";
+"Open games in a separate window" = "Deschide jocurile într-o fereastră separată";
+"The separate window shows only the game. It does not show library controls, the ZeeSwift FPS counter, errors, or diagnostics. Applies from the next game start." = "Fereastra separată afișează doar jocul. Nu afișează comenzile bibliotecii, contorul FPS ZeeSwift, erorile sau diagnosticarea. Se aplică de la următoarea pornire a jocului.";
+"Show FPS counter" = "Afișează contorul FPS";
+"The FPS counter remains enabled during a test run." = "Contorul FPS rămâne activat în timpul unei rulări de test.";
+"Shows the frame rate in the top-right corner while playing." = "Afișează rata de cadre în colțul din dreapta sus în timpul jocului.";
+"Scaling" = "Scalare";
+"Pixel-perfect scaling" = "Scalare pixel-perfect";
+"Saved for “%@”. Enlarges the image without additional smoothing." = "Salvată pentru „%@”. Mărește imaginea fără netezire suplimentară.";
+"Start a game to configure its scaling." = "Pornește un joc pentru a-i configura scalarea.";
+"Runtime Diagnostics" = "Diagnosticarea execuției";
+"Save …" = "Salvează …";
+"All Games" = "Toate jocurile";
+"Favorites" = "Favorite";
+"Recently Played" = "Jucate recent";
+"Search games" = "Caută jocuri";
+"Clear search" = "Șterge căutarea";
+"Name A–Z" = "Nume A–Z";
+"Recently played / added" = "Jucate / adăugate recent";
+"Sort order" = "Ordine de sortare";
+"%lld game" = "%lld joc";
+"%lld games" = "%lld jocuri";
+"Importing games and original icons …" = "Se importă jocurile și pictogramele originale …";
+"Room for your games" = "Loc pentru jocurile tale";
+"No games found" = "Nu s-au găsit jocuri";
+"Add your Zeebo ZIPs or drag them into this window.\nYour games remain in their current location." = "Adaugă arhivele ZIP Zeebo sau trage-le în această fereastră.\nJocurile rămân în locația lor curentă.";
+"Try a different search or view." = "Încearcă o altă căutare sau vizualizare.";
+"Choose Games …" = "Alege jocuri …";
+"Play" = "Joacă";
+"Controller Mapping …" = "Maparea controlerului …";
+"Remove from Favorites" = "Elimină din Favorite";
+"Mark as Favorite" = "Marchează ca favorit";
+"Show in Finder" = "Arată în Finder";
+"Remove from Library" = "Elimină din bibliotecă";
+"LIBRARY" = "BIBLIOTECĂ";
+"Not played yet" = "Nu a fost pornit încă";
+"Play %@" = "Joacă %@";
+"Controller mapping for %@" = "Maparea controlerului pentru %@";
+"Remove Favorite" = "Elimină favoritul";
+"Add Zeebo Games" = "Adaugă jocuri Zeebo";
+"Add" = "Adaugă";
+"The library could not be loaded: %@" = "Biblioteca nu a putut fi încărcată: %@";
+"Game added to the library" = "Joc adăugat în bibliotecă";
+"%lld games added" = "%lld jocuri adăugate";
+"Controller settings: %@" = "Configurări controler: %@";
+"Controller settings could not be loaded: %@" = "Configurările controlerului nu au putut fi încărcate: %@";
+"The mapping could not be saved: %@" = "Maparea nu a putut fi salvată: %@";
+"Controller Mapping" = "Maparea controlerului";
+"Global for all games without a custom mapping" = "Globală pentru toate jocurile fără mapare proprie";
+"Done" = "Gata";
+"Player" = "Jucător";
+"Player 1" = "Jucătorul 1";
+"Player 2" = "Jucătorul 2";
+"For This Game" = "Pentru acest joc";
+"Use Global Mapping" = "Folosește maparea globală";
+"Custom Mapping" = "Mapare proprie";
+"Changes to the global mapping also apply to this game." = "Modificările mapării globale se aplică și acestui joc.";
+"Open Global Settings" = "Deschide configurările globale";
+"Input device for Player %lld" = "Dispozitiv de intrare pentru jucătorul %lld";
+"Input" = "Intrare";
+"Connected Device" = "Dispozitiv conectat";
+"Controller 1" = "Controler 1";
+"Controller 2" = "Controler 2";
+"Device numbers are shown in the global controller settings. When one disconnects, the other controller keeps its position." = "Numerele dispozitivelor apar în configurările globale ale controlerelor. Când unul se deconectează, celălalt controler își păstrează poziția.";
+"Both players share keyboard keys. Those keys control both players at the same time." = "Ambii jucători folosesc aceleași taste. Aceste taste îi controlează simultan pe ambii jucători.";
+"Both players use the same controller. Choose different devices for separate input." = "Ambii jucători folosesc același controler. Alege dispozitive diferite pentru intrări separate.";
+"Keyboard" = "Tastatură";
+"Click a mapping and press the desired key. Both sticks can be mapped; keyboard axes use full deflection. Shortcuts reserved by macOS remain with the system." = "Fă clic pe o mapare și apasă tasta dorită. Ambele stickuri pot fi mapate; axele tastaturii folosesc cursa maximă. Scurtăturile rezervate de macOS rămân ale sistemului.";
+"Not Assigned" = "Neatribuit";
+"Remove mapping" = "Elimină maparea";
+"Choose the desired Zeebo button for each controller button. Multiple buttons may trigger the same function." = "Alege butonul Zeebo dorit pentru fiecare buton al controlerului. Mai multe butoane pot declanșa aceeași funcție.";
+"Action Buttons" = "Butoane de acțiune";
+"Shoulders and Triggers" = "Butoane dorsale și trăgaciuri";
+"Menu and Stick Buttons" = "Butoane de meniu și stick";
+"D-pad" = "Cruce direcțională";
+"Cross / A" = "Cruce / A";
+"Circle / B" = "Cerc / B";
+"Triangle / Y" = "Triunghi / Y";
+"Square / X" = "Pătrat / X";
+"Options / Menu" = "Opțiuni / Meniu";
+"Share / Create / View" = "Partajare / Creare / Vizualizare";
+"Press Left Stick" = "Apasă stickul stâng";
+"Press Right Stick" = "Apasă stickul drept";
+"D-pad Up" = "Cruce direcțională sus";
+"D-pad Down" = "Cruce direcțională jos";
+"D-pad Left" = "Cruce direcțională stânga";
+"D-pad Right" = "Cruce direcțională dreapta";
+"Home / Pause (Automatic)" = "Home / Pauză (automat)";
+"Home as Start" = "Home ca Start";
+"Home as Back" = "Home ca Înapoi";
+"Controller and Keyboard" = "Controler și tastatură";
+"Not Connected" = "Neconectat";
+"Zeebo 1 (Additional Key)" = "Zeebo 1 (tastă suplimentară)";
+"Left Stick ↑" = "Stick stâng ↑";
+"Left Stick ↓" = "Stick stâng ↓";
+"Left Stick ←" = "Stick stâng ←";
+"Left Stick →" = "Stick stâng →";
+"Right Stick ↑" = "Stick drept ↑";
+"Right Stick ↓" = "Stick drept ↓";
+"Right Stick ←" = "Stick drept ←";
+"Right Stick →" = "Stick drept →";
+"Analog Sticks" = "Stickuri analogice";
+"Swap left and right sticks" = "Inversează stickul stâng cu cel drept";
+"Left stick: invert X axis" = "Stick stâng: inversează axa X";
+"Left stick: invert Y axis" = "Stick stâng: inversează axa Y";
+"Right stick: invert X axis" = "Stick drept: inversează axa X";
+"Right stick: invert Y axis" = "Stick drept: inversează axa Y";
+"When sticks are swapped, the axes refer to the corresponding Zeebo stick." = "Când stickurile sunt inversate, axele se referă la stickul Zeebo corespunzător.";
+"Home / Pause (Automatic) uses the game's known pause button. Choose “Home as Start” or “Home as Back” to set it explicitly." = "Home / Pauză (automat) folosește butonul de pauză cunoscut al jocului. Alege „Home ca Start” sau „Home ca Înapoi” pentru a-l stabili explicit.";
+"Restore Default Mapping" = "Restaurează maparea implicită";
+"Use Global Mapping Again" = "Folosește din nou maparea globală";
+"Reload" = "Reîncarcă";
+"Saved automatically. Briefly release held buttons after making a change." = "Se salvează automat. Eliberează pentru scurt timp butoanele ținute apăsat după o modificare.";
+"Player %lld · %@" = "Jucătorul %lld · %@";
+"Press the desired key now" = "Apasă acum tasta dorită";
+"Cancel" = "Anulează";
+"Space" = "Spațiu";
+"Enter (Numpad)" = "Enter (tastatură numerică)";
+"Delete" = "Ștergere";
+"Left Shift" = "Shift stânga";
+"Right Shift" = "Shift dreapta";
+"Left Control" = "Control stânga";
+"Right Control" = "Control dreapta";
+"Left Option" = "Opțiune stânga";
+"Right Option" = "Opțiune dreapta";
+"Emulation running" = "Emularea rulează";
+"Emulation waiting for events" = "Emularea așteaptă evenimente";
+"Emulation running · %lld frames" = "Emularea rulează · %lld cadre";
+"Game ended" = "Joc încheiat";
+"Emulation paused" = "Emulare întreruptă";
+"Controller %lld: %@" = "Controler %lld: %@";
+"Connected" = "Conectat";
+"Invalid file: %@" = "Fișier nevalid: %@";
+"Not supported yet: %@" = "Nu este acceptat încă: %@";
+"Guest memory access outside a region: %@ (%lld bytes)" = "Acces la memoria oaspete în afara unei regiuni: %@ (%lld octeți)";
+"Unimplemented %@ instruction %@ at %@" = "Instrucțiune %@ neimplementată %@ la %@";
+"Missing HLE call: %@, return address %@" = "Apel HLE lipsă: %@, adresă de întoarcere %@";
+"Execution budget reached at %@" = "Bugetul de execuție a fost atins la %@";
+"Guest exited (ARM semihosting, reason %@)" = "Oaspetele s-a închis (semigăzduire ARM, motiv %@)";
+"Game FPS: %.1f · Average since start: %.1f · Measurement time: %.2f s · %@" = "FPS joc: %.1f · Medie de la pornire: %.1f · Durata măsurării: %.2f s · %@";
+"Real time" = "Timp real";
+"synthetic test clock: no comparable game FPS" = "ceas de test sintetic: fără FPS comparabil pentru joc";
+"ARM diagnostic output (%lld additional bytes discarded):" = "Ieșire de diagnostic ARM (%lld octeți suplimentari eliminați):";
+"Phase: %@" = "Fază: %@";
+"MOD: %lld bytes, code: %@..<%@, HLE: %@" = "MOD: %lld octeți, cod: %@..<%@, HLE: %@";
+"ARM/Thumb instructions: %lld" = "Instrucțiuni ARM/Thumb: %lld";
+"Native JIT instructions: %lld" = "Instrucțiuni JIT native: %lld";
+"JIT blocks: %lld" = "Blocuri JIT: %lld";
+"Repeated FREE calls: %lld" = "Apeluri FREE repetate: %lld";
+"Guest frames: %lld" = "Cadre oaspete: %lld";
+"GL draw calls: %lld" = "Apeluri de desenare GL: %lld";
+"PC: %@" = "PC: %@";
+"HID position queries: %lld" = "Interogări de poziție HID: %lld";
+"Timer calls: %lld" = "Apeluri de temporizator: %lld";
+"Save-game files: %lld, %lld bytes" = "Fișiere de salvare: %lld, %lld octeți";
+"Loaded" = "Încărcat";
+"Applet in background" = "Applet în fundal";
+"BREW module initialization" = "Inițializare modul BREW";
+"Module loaded" = "Modul încărcat";
+"Applet creation" = "Creare applet";
+"Applet created" = "Applet creat";
+"Leertaste" = "Spațiu";
+"Enter (Ziffernblock)" = "Enter (tastatură numerică)";
+"Entf" = "Ștergere";
+"Umschalt links" = "Shift stânga";
+"Umschalt rechts" = "Shift dreapta";
+"Ctrl links" = "Control stânga";
+"Ctrl rechts" = "Control dreapta";
+"Option links" = "Opțiune stânga";
+"Option rechts" = "Opțiune dreapta";
+
+"Internal Resolution" = "Rezoluție internă";
+
+"Apply to" = "Aplică pentru";
+
+"All games (default)" = "Toate jocurile (implicit)";
+
+"Resolution" = "Rezoluție";
+
+"Use global default (%@)" = "Folosește valoarea globală (%@)";
+
+"Applies when the game next starts. Higher resolutions sharpen 3D geometry; original textures and 2D artwork keep their original detail." = "Se aplică la următoarea pornire a jocului. Rezoluțiile mai mari fac geometria 3D mai clară; texturile și imaginile 2D își păstrează detaliile originale.";
+
+"Settings …" = "Configurări …";
+
+"Settings for %@" = "Configurări pentru %@";
+
+"Game Settings" = "Configurări joc";
+
+"Use Global Default" = "Folosește valoarea globală";
+
+"Enabled" = "Activat";
+
+"Disabled" = "Dezactivat";
+
+"Enlarges the image without additional smoothing." = "Mărește imaginea fără netezire suplimentară.";
+
+"Defaults for games without custom settings. Right-click a game in the library to configure it individually." = "Valori implicite pentru jocurile fără configurări proprii. Fă clic dreapta pe un joc din bibliotecă pentru a-l configura individual.";
+
+"Saved automatically for this game. Other games keep their own settings." = "Se salvează automat pentru acest joc. Celelalte jocuri își păstrează propriile configurări.";
+
+"Window Scaling" = "Scalarea ferestrei";
+
+"Image size" = "Dimensiunea imaginii";
+
+"Keep aspect ratio (4:3)" = "Păstrează raportul de aspect (4:3)";
+
+"Fill window" = "Umple fereastra";
+
+"Fill window stretches the image to the available width and height without adding black bars. Applies immediately while playing." = "„Umple fereastra” întinde imaginea la lățimea și înălțimea disponibile fără a adăuga benzi negre. Se aplică imediat în timpul jocului.";
+
+/* MetalFX presentation */
+"Upscaling" = "Mărire";
+"Upscales the game image when the window is larger than the internal resolution. Applies immediately. Pixel-perfect texture scaling remains a separate setting." = "Mărește imaginea jocului când fereastra depășește rezoluția internă. Se aplică imediat. Scalarea exactă a texturilor rămâne o setare separată.";
+"MetalFX is not supported on this Mac." = "MetalFX nu este acceptat pe acest Mac.";
+
+"Temporal uses depth and motion from 3D rendering. Images without valid temporal data use Spatial automatically." = "Temporal folosește date de adâncime și mișcare din randarea 3D. Imaginile fără date temporale valide folosesc automat Spatial.";
+
+"Anti-Aliasing" = "Netezirea marginilor";
+"Smooths 3D geometry edges. Applies when the game next starts. Higher sample counts use more GPU memory and processing time." = "Netezește marginile geometriei 3D. Se aplică la următoarea pornire a jocului. Mai multe eșantioane necesită mai multă memorie GPU și timp de procesare.";
